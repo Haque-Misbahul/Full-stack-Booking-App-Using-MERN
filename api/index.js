@@ -8,10 +8,13 @@ const bcrypt = require('bcryptjs');
 const bcryptSalt =  bcrypt.genSaltSync(10);
 const jwt = require('jsonwebtoken');
 const jwtSecret = 'lkjsl78394kjslödkf9o893jlkjldsf098723o'; // just a random string
+const cookieParser = require('cookie-parser');
+
 
 
 
 app.use(express.json());
+app.use(cookieParser());
 app.use(cors({
     credentials: true,
     origin: 'http://localhost:5173',
@@ -54,6 +57,11 @@ app.post('/login', async (req,res) =>{
     } else {
         res.json('Not found');
     }
+});
+
+app.get('/profile', (req,res) => {
+    const {token} = req.cookies;
+    res.json({token});
 });
  
 
