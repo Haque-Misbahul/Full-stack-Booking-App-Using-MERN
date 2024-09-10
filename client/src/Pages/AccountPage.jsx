@@ -23,6 +23,8 @@ export default function AccountPage(){
     if (ready && !user && !redirect) {
         return <Navigate to={'/login'}/>
     }
+
+    console.log('working');
     
 
     const activeSubpage = subpage || 'profile';  // Fallback to 'profile' if subpage is undefined
