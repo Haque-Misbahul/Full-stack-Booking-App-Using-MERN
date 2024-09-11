@@ -25,6 +25,7 @@ export default function AccountPage(){
     }
 
     console.log('working');
+    console.log('bug fixed');
     
 
     const activeSubpage = subpage || 'profile';  // Fallback to 'profile' if subpage is undefined
