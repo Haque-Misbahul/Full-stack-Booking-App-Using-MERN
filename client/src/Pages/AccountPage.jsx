@@ -25,10 +25,6 @@ export default function AccountPage() {
         return <Navigate to={'/login'} />
     }
 
-    console.log('working');
-    console.log('bug fixed');
-    console.log('Initializes Places')
-    console.log('Initializes Places2')
 
 
     const activeSubpage = subpage || 'profile';  // Fallback to 'profile' if subpage is undefined
