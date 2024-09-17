@@ -119,7 +119,7 @@ export default function PlacesPage() {
                                 </div>
                             </div>
                             <div>
-                                <button className="primary">Save</button>
+                                <button className="primary my-4">Save</button>
                             </div>
 
                     </form>
