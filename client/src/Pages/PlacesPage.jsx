@@ -15,6 +15,25 @@ export default function PlacesPage() {
     const [checkOut,setCheckOut] = useState('');
     const [maxGuests,setMaxGuests] = useState('1');
 
+    function inputHeader(text) {
+        return (
+            <h2 className="text-2xl mt-4">{text}</h2>
+        );
+    }
+    function inputDescription(text) {
+        return (
+            <p className="text-gray-500 text-sm">{text}</p>
+        );
+    }
+    function preInput(header, description) {
+        return (
+            <>
+            {inputHeader(header)}
+            {inputDescription(description)}
+            </>
+        );
+    }
+
 
     return (
         <div>
@@ -32,14 +51,13 @@ export default function PlacesPage() {
             {action === 'new' && (
                 <div>
                     <form>
-                        <h2 className="text-2xl mt-4">Title</h2>
-                        <p className="text-gray-500 text-sm">Title for your Place, should be short and catchy as in advertisement</p>
+                        {preInput('Title','Title for your Place, should be short and catchy as in advertisement')}
                         <input type="text" placeholder="Title, for example: My Lovely Apartment" />
-                        <h2 className="text-2xl mt-4">Address</h2>
-                        <p className="text-gray-500 text-sm">Address to this place</p>
+
+                        {preInput('Address','Address to this place')}
                         <input type="text" placeholder="Address" />
-                        <h2 className="text-2xl mt-4">Photos</h2>
-                        <p className="text-gray-500 text-sm">More = Better</p>
+
+                        {preInput('Photos','More = Better')}
                         <div className="flex gap-2">
                             <input type="text" placeholder="Add using a link....jpg" />
                             <button className="bg-gray-200 px-4 rounded-2xl">Add&nbsp;photo</button>
@@ -53,11 +71,12 @@ export default function PlacesPage() {
                             </button>
                         </div>
 
-                        <h2 className="text-2xl mt-4">Description</h2>
-                        <p className="text-gray-500 text-sm">Description of the place</p>
+                       
+                        {preInput('Description', 'Description of the place')}
                         <textarea />
-                        <h2 className="text-2xl mt-4">Perks</h2>
-                        <p className="text-gray-500 text-sm">Select all the perks of the place</p>
+
+                        {preInput('Perks','Select all the perks of the place')}
+
 
                         <div className="grid gap-2 mt-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
                             <label className="border p-4 flex rounded-2xl gap-2 items-center cursor-pointer">
@@ -109,12 +128,12 @@ export default function PlacesPage() {
                                 <span>Private entrance</span>
                             </label>
                         </div>
-                        <h2 className="text-2xl mt-4">Extra Info</h2>
-                        <p className="text-gray-500 text-sm">House rules etc</p>
+                        
+                        {preInput('Extra Info','House Rules etc')}
                         <textarea />
-                        <h2 className="text-2xl mt-4">Check in & out time</h2>
-                        <p className="text-gray-500 text-sm">Add check in and out time,
-                            remember to have some time window for cleaning the room between guests</p>
+
+                        {preInput('CheckIn and CheckOut time','Add check in and out time,remember to have some time window for cleaning the room between guests')}
+                       
 
                             <div className="grid gap-2 sm:grid-cols-3">
                                 <div>
