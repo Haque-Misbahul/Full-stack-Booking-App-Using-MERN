@@ -115,4 +115,8 @@ res.json(uploadedFiles);
 
 
 //Swn2zcfzPkYuUq5Z
-app.listen(4000);
+// app.listen(4000);
+
+app.listen(4000, () => {
+    console.log('Server is running on port 4000');
+});
