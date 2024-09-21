@@ -8,7 +8,7 @@ export default function Perks({ seleted, onChange }) {
         } else {
             onchange([...seleted.filter(selectedName => selectedName !== name)]);
         }
-      
+       console.log('perks done');
     }
     return (
         <>

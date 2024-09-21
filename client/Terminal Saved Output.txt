@@ -1,0 +1,49 @@
+Last login: Sat Sep  7 03:43:42 on ttys033
+misbahulhaque@Misbahuls-MBP ~ % npm i -g nodemon
+
+changed 30 packages, and audited 31 packages in 2s
+
+4 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+npm notice 
+npm notice New major version of npm available! 8.15.0 -> 10.8.3
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v10.8.3
+npm notice Run npm install -g npm@10.8.3 to update!
+npm notice 
+misbahulhaque@Misbahuls-MBP ~ % nodemon --v
+zsh: command not found: nodemon
+misbahulhaque@Misbahuls-MBP ~ % nodemon --version
+zsh: command not found: nodemon
+misbahulhaque@Misbahuls-MBP ~ % npm bin -g
+
+/Users/misbahulhaque/.npm-global/bin
+npm ERR! bin (not in PATH env variable)
+misbahulhaque@Misbahuls-MBP ~ % nano ~/.zshrc
+
+
+  UW PICO 5.09           File: /Users/misbahulhaque/.zshrc            Modified  
+
+export PATH="/Users/misbahulhaque/.npm-global/bin:$PATH"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+^G Get Help  ^O WriteOut  ^R Read File ^Y Prev Pg   ^K Cut Text  ^C Cur Pos   
+^X Exit      ^J Justify   ^W Where is  ^V Next Pg   ^U UnCut Text^T To Spell  
