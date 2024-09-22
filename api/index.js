@@ -113,6 +113,23 @@ for (let i=0; i< req.files.length; i++) {
 res.json(uploadedFiles);
 });
 
+app.post('/places', (req,res) => {
+    const {token} = req.cookies;
+    const {titile, address, addedPhotos, 
+        description, perks, extraInfo, 
+        checkIn, checkOut, maxGuests,} = req.body;
+    jwt.verify(token, jwtSecret, {},async (err, userData) => {
+        if  (err) throw err;
+       const placeDoc = await PlacesPage.create({
+            owner: userData.id, titile, address, addedPhotos, 
+            description, perks, extraInfo, 
+            checkIn, checkOut, maxGuests,
+         });
+         res.json(placeDoc);
+        });
+ 
+});
+
 
 //Swn2zcfzPkYuUq5Z
 // app.listen(4000);
