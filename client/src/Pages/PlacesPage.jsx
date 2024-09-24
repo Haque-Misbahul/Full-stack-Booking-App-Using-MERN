@@ -16,7 +16,7 @@ export default function PlacesPage() {
 
     return (
         <div>
-            <AccountNav />
+            <AccountNav activeSubpage="places"  />
             {action !== 'new' && (
                 <div className="text-center">
                     List of all added places
