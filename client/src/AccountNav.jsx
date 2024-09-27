@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 export default function AccountNav ({activeSubpage}) {
 
     
-
-
+console.log('Refctor work');
 
     function linkClasses(type = null) {
         return `inline-flex gap-1 py-2 px-6 rounded-full ${type === activeSubpage ? 'bg-primary text-white ' : 'bg-gray-200 rounded-full'}`;
